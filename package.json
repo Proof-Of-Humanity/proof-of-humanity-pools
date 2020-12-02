@@ -14,7 +14,7 @@
   },
   "scripts": {
     "precompile": "rimraf ./build/",
-    "compile": "waffle",
+    "compile": "waffle && waffle flatten",
     "pretest": "yarn compile",
     "test": "mocha",
     "lint": "prettier ./test/**/*.ts --check",
