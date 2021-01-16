@@ -1,4 +1,12 @@
-pragma solidity ^0.5.16;
+/**
+ *  @authors: []
+ *  @reviewers: [@clesaege]
+ *  @auditors: []
+ *  @bounties: []
+ *  @deployments: []
+ *  @tools: []
+ */
+ pragma solidity ^0.5.16;
 
 import 'openzeppelin-solidity-2.3.0/contracts/token/ERC20/IERC20.sol';
 import 'openzeppelin-solidity-2.3.0/contracts/ownership/Ownable.sol';
@@ -55,8 +63,7 @@ contract StakingRewardsFactory is Ownable {
         }
     }
 
-    // notify reward amount for an individual staking token.
-    // this is a fallback in case the notifyRewardAmounts costs too much gas to call for all contracts
+    // transfer tokens and notify reward amount for an individual staking token.
     function notifyRewardAmount(address stakingToken) public {
         require(block.timestamp >= stakingRewardsGenesis, 'StakingRewardsFactory::notifyRewardAmount: not ready');
 
