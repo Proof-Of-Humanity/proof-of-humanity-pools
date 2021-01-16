@@ -1,3 +1,11 @@
+/**
+ *  @authors: []
+ *  @reviewers: [@clesaege]
+ *  @auditors: []
+ *  @bounties: []
+ *  @deployments: []
+ *  @tools: []
+ */
 pragma solidity ^0.5.16;
 
 contract RewardsDistributionRecipient {
